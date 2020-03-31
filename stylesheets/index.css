@@ -1,0 +1,141 @@
+@import url('./normalize.css');
+@import url('./_variables.css');
+
+/* Navbar sepecific styles */
+.navbar {
+  background-color: transparent;
+  padding: 25px 50px;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  transition: padding 0.3s cubic-bezier(0.72, 0.16, 0.345, 0.875);
+}
+
+.navbar-scrolled {
+  background-image: var(--gradient);
+  padding: 10px 50px;
+}
+
+.nav-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 1400px;
+  max-width: calc(100% - 50px);
+  padding: 0 25px;
+  margin: 0 auto;
+  color: white;
+}
+
+.logo {
+  background: url('../assets/images/logo-white.svg');
+  background-repeat: no-repeat;
+}
+
+.logo img {
+  opacity: 0;
+}
+
+.navbar div {
+  display: flex;
+  align-items: center;
+}
+
+.navbar ul {
+  padding: 0;
+  list-style-type: none;
+  margin-left: 30%;
+  white-space: nowrap;
+}
+
+.nav-link {
+  display: inline-block;
+  margin: 0 12px;
+}
+
+.nav-link a {
+  text-decoration: none;
+  transition: transform 1s ease-in;
+  color: white;
+}
+
+.nav-link a:hover {
+  transform: translateX(10px);
+}
+
+.nav-action {
+  display: flex;
+  align-items: center;
+}
+
+.nav-action button {
+  border-radius: 50px;
+  width: 110px;
+  padding: 8px 10px;
+  color: var(--primary);
+  background-color: white;
+  border: none;
+  outline: none;
+  margin: 0 20px;
+  box-shadow: rgba(0, 0, 0, 0.3);
+}
+
+.nav-action div {
+  position: relative;
+  cursor: pointer;
+}
+
+.nav-action div a {
+  color: white;
+}
+
+.nav-action div a::after,
+.nav-action div a::before {
+  content: '';
+  position: absolute;
+  right: -20px;
+  width: 10px;
+  height: 0.5px;
+  border: 1px solid white;
+  transition: top 0.2s ease-in-out, bottom 0.2s ease-in-out;
+}
+
+.nav-action div a::before {
+  top: 3px;
+}
+
+.nav-action div a::after {
+  bottom: 3px;
+}
+
+.nav-action div:hover a::before {
+  top: 1px;
+}
+
+.nav-action div:hover a::after {
+  bottom: 1px;
+}
+
+.lg {
+  display: none;
+}
+
+@media only screen and (min-width: 992px) {
+  .lg {
+    display: block;
+  }
+}
+
+/* End of navbar styles */
+
+/* Hero section */
+.hero {
+  background-image: var(--gradient);
+  padding-top: 50px;
+  height: calc(100% - 50px);
+}
+.container {
+  
+}
+/* End of hero section */

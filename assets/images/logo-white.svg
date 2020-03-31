@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="22px" height="28px" viewBox="0 0 22 28" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.1 (57501) - http://www.bohemiancoding.com/sketch -->
+    <title>brand/logo_icon_white</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="brand/logo_icon_white" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Logo-icon" fill="#FFFFFF">
+            <path d="M7.544068,20.9708687 L2.8e-05,20.9708687 L2.8e-05,27.9612525 L6.920228,27.9612525 L13.840708,27.9612525 C17.662428,27.9612525 20.760908,24.8314747 20.760908,20.9708687 L7.544068,20.9708687 Z" id="Fill-1" opacity="0.800000012"></path>
+            <path d="M13.840652,7.33854545 L13.840652,13.9804848 C17.662372,13.9804848 20.760852,10.8509899 20.760852,6.99010101 C20.760852,3.12977778 17.662372,-1.42108547e-14 13.840652,-1.42108547e-14 L13.840652,7.33854545 Z" id="Fill-3" opacity="0.349999994"></path>
+            <polygon id="Fill-5" opacity="0.449999988" points="6.920368 -1.42108547e-14 6.920368 6.99038384 6.920368 13.9804848 10.380328 13.9804848 13.840568 13.9804848 13.840568 -1.42108547e-14"></polygon>
+            <path d="M6.920452,13.9805131 L6.920452,17.4757051 L6.920452,20.970897 L13.840652,20.970897 L20.760852,20.970897 C20.760852,17.1102909 17.662372,13.9805131 13.840652,13.9805131 L6.920452,13.9805131 Z" id="Fill-7" opacity="0.550000012"></path>
+            <polygon id="Fill-9" opacity="0.649999976" points="0 20.9707556 6.9202 20.9707556 6.9202 -0.000113131313 0 -0.000113131313"></polygon>
+        </g>
+    </g>
+</svg>
