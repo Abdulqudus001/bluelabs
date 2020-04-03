@@ -1,10 +1,14 @@
 @import url('./normalize.css');
 @import url('./_variables.css');
 
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
 /* Navbar sepecific styles */
 .navbar {
   background-color: transparent;
-  padding: 25px 50px;
+  padding: 15px 10px;
   position: fixed;
   top: 0;
   right: 0;
@@ -12,9 +16,10 @@
   transition: padding 0.3s cubic-bezier(0.72, 0.16, 0.345, 0.875);
 }
 
-.navbar-scrolled {
+.navbar.navbar-scrolled {
   background-image: var(--gradient);
   padding: 10px 50px;
+  z-index: 3;
 }
 
 .nav-container {
@@ -31,6 +36,7 @@
 .logo {
   background: url('../assets/images/logo-white.svg');
   background-repeat: no-repeat;
+  margin-left: -10px;
 }
 
 .logo img {
@@ -72,7 +78,7 @@
 .nav-action button {
   border-radius: 50px;
   width: 110px;
-  padding: 8px 10px;
+  padding: 5px 10px;
   color: var(--primary);
   background-color: white;
   border: none;
@@ -95,7 +101,7 @@
   content: '';
   position: absolute;
   right: -20px;
-  width: 10px;
+  width: 8px;
   height: 0.5px;
   border: 1px solid white;
   transition: top 0.2s ease-in-out, bottom 0.2s ease-in-out;
@@ -122,6 +128,14 @@
 }
 
 @media only screen and (min-width: 992px) {
+  .navbar {
+    padding: 25px 50px;
+  }
+
+  .logo {
+    margin-left: -25px;
+  }
+
   .lg {
     display: block;
   }
@@ -133,9 +147,90 @@
 .hero {
   background-image: var(--gradient);
   padding-top: 50px;
-  height: calc(100% - 50px);
+  height: calc(100% - 60px);
+  color: white;
+  overflow: hidden;
 }
 .container {
-  
+  width: 1200px;
+  max-width: calc(100% - 100px);
+  padding: 0 50px;
+  margin: 0 auto;
 }
+
+.hero-img {
+  text-align: center;
+}
+
+.hero-img img {
+  margin-top: 30px;
+  width: 100%;
+}
+
+
+.hero-text {
+  flex: 1 0 50%;
+  text-align: center;
+  z-index: 3;
+}
+
+.hero-text h1 {
+  font-size: 1.87rem;
+  opacity: 0.5;
+}
+
+.hero-text h2 {
+  font-size: 1.5rem;
+}
+
+.hero-text button {
+  margin: 20px 0;
+  background-color: #fff;
+  cursor: pointer;
+  border-radius: 50px;
+  border: none;
+  width: 200px;
+  height: 60px;
+}
+
+@media only screen and (min-width: 700px) {
+  .flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .hero-img {
+    flex: 1 0 50%;
+    z-index: 2;
+  }
+
+  .hero-img {
+    transform: translateX(-25%);
+  }
+  
+  .hero-img img {
+    width: 140%;
+  }
+
+  .hero-text {
+    text-align: left;
+  }
+
+  .hero-text h2 {
+    font-size: 2.5rem;
+  }
+}
+
+@media only screen and (min-width: 800px) {
+
+}
+
+
+@media only screen and (min-width: 992px) {
+  .hero-img img {
+    width: 150%;
+  }
+}
+
 /* End of hero section */
