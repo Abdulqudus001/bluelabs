@@ -9,3 +9,28 @@ const getScrollTop = e => {
 };
 
 window.addEventListener('scroll', getScrollTop);
+
+const lazyLoad = () => {
+  let images;
+  if ('IntersectionObserver' in window) {
+    images = document.querySelectorAll('.lazy');
+    const imageObserver = new IntersectionObserver((entries, observer) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          const image = entry.target;
+          console.log(image);
+          image.src = image.dataset.src;
+          image.classList.add('animate');
+          image.classList.remove('lazy');
+          // imageObserver.unobserve(image);
+        }
+      });
+    });
+
+    images.forEach(image => {
+      imageObserver.observe(image);
+    });
+  }
+};
+
+document.addEventListener('DOMContentLoaded', lazyLoad);
