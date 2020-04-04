@@ -18,7 +18,7 @@ body {
 
 .navbar.navbar-scrolled {
   background-image: var(--gradient);
-  padding: 10px 50px;
+  padding: 10px;
   z-index: 4;
 }
 
@@ -130,6 +130,10 @@ body {
 @media only screen and (min-width: 992px) {
   .navbar {
     padding: 25px 50px;
+  }
+
+  .navbar.navbar-scrolled {
+    padding: 10px 50px;
   }
 
   .logo {
@@ -245,7 +249,7 @@ body {
   text-align: center;
   font-size: 1.8rem;
   font-weight: 500;
-  width: 550px;
+  width: 580px;
   max-width: 100%;
   margin: 20px auto;
 }
@@ -398,6 +402,7 @@ body {
 .card {
   flex: 0 0 auto;
   width: 250px;
+  height: 310px;
   max-width: 100%;
   background-color: #fff;
   border-radius: 8px;
@@ -422,13 +427,128 @@ body {
 }
 
 @media only screen and (min-width: 800px) {
-  .card {
+  .cards {
     flex-wrap: nowrap;
+  }
+
+  .card {
     margin: 10px;
   }
 
   .card:nth-child(even) {
     margin-top: 50px;
   }
+
+  .subtitle {
+    font-size: 1.8rem;
+  }
 }
 /* End of recognition section */
+
+/* Sprints section */
+
+.sprints {
+  padding: 40px 0;
+}
+
+.title.text {
+  font-size: 1.5rem;
+}
+
+.subtitle {
+  width: 600px;
+  max-width: 100%;
+  font-size: 1.3rem;
+  font-weight: 500;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.steps {
+  margin: 40px 0;
+}
+
+.step {
+  width: 300px;
+  max-width: 100%;
+  margin: 10px auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  position: relative;
+}
+
+.step-name {
+  font-size: 1.1rem;
+  margin-top: 40px;
+}
+
+.step p:not(.step-name) {
+  opacity: 0.6;
+}
+
+.research::after,
+.design::after {
+  content: '';
+  background-image: url('../assets/images/path1.svg');
+  width: 160px;
+  height: 30px;
+  opacity: 0.8;
+  position: absolute;
+}
+
+.research::after {
+  transform: scale(0.5) rotate(90deg);
+  top: calc(100% + 40px);
+}
+
+.design {
+  margin: 160px auto 160px;
+}
+
+.design::after {
+  transform: scale(0.5) rotate(270deg);
+  top: calc(100% + 40px);
+}
+
+@media only screen and (min-width: 800px) {
+  .title.text {
+    font-size: 2.5rem;
+  }
+  .subtitle {
+    font-size: 1.8rem;
+    text-align: left;
+    margin: 0 auto 15%;
+  }
+
+  .steps {
+    display: flex;
+    justify-content: space-between;
+    margin: 50px 0;
+  }
+
+  .research::after,
+  .design::after {
+    width: 160px;
+    height: 30px;
+    left: calc(100% - 40px);
+    top: calc(20% - 15px);
+    opacity: 0.3;
+  }
+
+  .design {
+    margin: 10px auto;
+  }
+
+  .research::after {
+    transform: rotate(0deg);
+  }
+
+  .design::after {
+    transform: rotate(180deg);
+    top: calc(10% - 15px);
+  }
+}
+
+/* End of sprints section */
