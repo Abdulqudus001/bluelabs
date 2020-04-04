@@ -22,7 +22,7 @@ const lazyLoad = () => {
           image.src = image.dataset.src;
           image.classList.add('animate');
           image.classList.remove('lazy');
-          // imageObserver.unobserve(image);
+          imageObserver.unobserve(image);
         }
       });
     });
