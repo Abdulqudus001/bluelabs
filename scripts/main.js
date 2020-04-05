@@ -10,6 +10,12 @@ const getScrollTop = e => {
 
 window.addEventListener('scroll', getScrollTop);
 
+const dropdown = document.querySelector('.dropdown');
+const showDropdown = () => {
+  dropdown.classList.toggle('show-dropdown');
+  dropdown.classList.toggle('hide-dropdown');
+};
+
 const lazyLoad = () => {
   let images;
   if ('IntersectionObserver' in window) {

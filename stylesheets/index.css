@@ -147,6 +147,140 @@ body {
 
 /* End of navbar styles */
 
+/* Dropdown section */
+
+.dropdown {
+  height: 0px;
+  width: 100%;
+  background-image: var(--gradient);
+  z-index: 100;
+  position: fixed;
+  top: 70px;
+  opacity: 0;
+  overflow-y: auto;
+}
+
+.show-dropdown {
+  animation: open 0.8s ease-in;
+  opacity: 1;
+  height: calc(100vh - 70px);
+}
+
+.hide-dropdown {
+  animation: close 0.8s ease-in;
+}
+
+@keyframes open {
+  from {
+    opacity: 0;
+    height: 0;
+  }
+
+  25% {
+    border-radius: 0 0 50px 50px;
+  }
+
+  to {
+    opacity: 1;
+    height: 100vh;
+  }
+}
+
+@keyframes close {
+  from {
+    opacity: 1;
+    border-radius: 0;
+    height: 100vh;
+  }
+
+  25% {
+    border-radius: 0 0 50px 50px;
+  }
+
+  to {
+    opacity: 0;
+    height: 0;
+    border-radius: 0;
+  }
+}
+
+.container.info {
+  width: 1000px;
+  overflow-y: auto;
+}
+
+.info ul {
+  list-style: none;
+  padding: 0;
+  color: #fff;
+}
+
+.info > ul li {
+  font-size: 1.5rem;
+  margin: 20px 0;
+}
+
+.info ul li a {
+  color: white;
+}
+
+.info > ul li.sm {
+  font-size: 1.2rem;
+}
+
+.offices {
+  margin-top: 40px;
+}
+
+.office p {
+  color: white;
+  font-weight: 500;
+  font-size: 1.1rem;
+}
+
+.office li {
+  font-size: 0.8rem;
+  margin: 20px 0;
+  opacity: 0.7;
+}
+
+@media only screen and (min-width: 800px) {
+  .info > ul li {
+    font-size: 3.2rem;
+  }
+
+  .info > ul li.sm {
+    font-size: 2.5rem;
+  }
+
+  .info {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .offices {
+    flex: 0 0 50%;
+    display: flex;
+    flex-flow: row wrap;
+  }
+
+  .office {
+    flex: 0 0 50%;
+  }
+
+  office p {
+    color: white;
+    font-weight: 500;
+    font-size: 1.2rem;
+  }
+  
+  .office li {
+    font-size: 1.1rem;
+  }
+}
+/* End of dropdown section */
+
+
 /* Hero section */
 .hero {
   background-image: var(--gradient);
@@ -231,10 +365,6 @@ body {
   }
 }
 
-@media only screen and (min-width: 800px) {
-
-}
-
 
 @media only screen and (min-width: 992px) {
   .hero-img img {
@@ -243,6 +373,8 @@ body {
 }
 
 /* End of hero section */
+
+
 
 /* Products section */
 
