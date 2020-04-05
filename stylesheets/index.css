@@ -1,5 +1,8 @@
 @import url('./normalize.css');
-@import url('./_variables.css');
+:root {
+  --primary: #3444f1;
+  --gradient: linear-gradient(302deg, #232fb8, #4554ff);
+}
 
 body {
   font-family: 'Roboto', sans-serif;
